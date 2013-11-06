@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'UISS'
-  s.version  = '1.1.1'
+  s.version  = '1.1.1-widgetlabs.1'
 
   s.platform = :ios, '5.0'
   
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author   = { 'Robert Wijas' => 'https://robertwijas.com' }
   s.description = 'UISS stands for UIKit Style Sheets. UISS is an iOS library that provides you with a convenient way to define the style of your application. UISS is built on top of UIKit UIAppearance proxies.'  
 
-  s.source   = { :git => 'https://github.com/robertwijas/UISS.git', :tag => "#{s.version}" }
+  s.source   = { :git => 'https://github.com/Widgetlabs/UISS.git', :tag => "#{s.version}" }
 
   s.source_files = 'Project/UISS'
   s.resources = 'Project/UISSResources.bundle'
