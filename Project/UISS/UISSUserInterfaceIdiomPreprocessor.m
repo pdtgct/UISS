@@ -20,7 +20,7 @@
     NSMutableDictionary *preprocessed = [NSMutableDictionary dictionary];
     
     [dictionary enumerateKeysAndObjectsUsingBlock:^(NSString *key, id object, BOOL *stop) {
-        UIUserInterfaceIdiom idiom = (UIUserInterfaceIdiom) [self userInterfaceIdiomFromKey:key];
+        NSInteger idiom = [self userInterfaceIdiomFromKey:key];
         
         if (idiom == NSNotFound) {
             [preprocessed setObject:[self preprocessValueIfNecessary:object userInterfaceIdiom:userInterfaceIdiom] forKey:key];
