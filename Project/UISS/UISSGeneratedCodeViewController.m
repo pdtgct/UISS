@@ -63,7 +63,7 @@
 - (void)updateErrorsButton;
 {
     if (self.errors.count) {
-        NSString *buttonTitle = [NSString stringWithFormat:@"Errors (%d)", self.errors.count];
+        NSString *buttonTitle = [NSString stringWithFormat:@"Errors (%lu)", (unsigned long)self.errors.count];
         
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:buttonTitle
                                                                                   style:UIBarButtonItemStyleBordered 
