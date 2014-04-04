@@ -20,12 +20,12 @@
     NSMutableDictionary *preprocessed = [NSMutableDictionary dictionary];
     
     [dictionary enumerateKeysAndObjectsUsingBlock:^(NSString *key, id object, BOOL *stop) {
-        typeof(NSNotFound) idiom = [self userInterfaceIdiomFromKey:key];
+        NSInteger idiom = (NSInteger)[self userInterfaceIdiomFromKey:key];
         
         if (idiom == NSNotFound) {
             [preprocessed setObject:[self preprocessValueIfNecessary:object userInterfaceIdiom:userInterfaceIdiom] forKey:key];
         } else {
-            if (idiom == userInterfaceIdiom) {
+            if ((UIUserInterfaceIdiom)idiom == userInterfaceIdiom) {
                 // skip everything that's not a dictionary
                 if ([object isKindOfClass:[NSDictionary class]]) {
                     [preprocessed addEntriesFromDictionary:[self preprocess:object userInterfaceIdiom:userInterfaceIdiom]];
